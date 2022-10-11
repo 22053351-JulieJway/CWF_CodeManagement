@@ -40,20 +40,13 @@ class NewAppointmentCollectionTest {
 	}
 
 	
-	void testNewAppointmentCollection_Junit() {
-		fail("Not yet implemented");
-	}
 
-	
-	void testNewAppointmentCollection_JunitInt() {
-		fail("Not yet implemented");
-	}
 
 
 
 	@Test
 	void testAddAppointment() {
-		//fail("Not yet implemented");
+	
 		List<NewAppointment_Junit> testAc = ac.getAppointments();
 		//Assert that Song collection is equals to song collection size 4
 		assertEquals(testAc.size(), APPOINTMENT_COLLECTION_SIZE);
