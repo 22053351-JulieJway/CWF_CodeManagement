@@ -9,7 +9,7 @@ import java.util.List;
 
 import com.sddevops.CWF_CodeManagement_Julie.NewAppointment_Junit;
 //import com.sddevops.junit_maven.eclipse.Song;
-
+//import com.sddevops.junit_maven.eclipse.Song;
 
 import java.util.List;
 
@@ -25,8 +25,8 @@ class NewAppointmentCollectionTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		ac = new NewAppointmentCollection_Junit();
-		ac1 = new NewAppointment_Junit("T0108307J","Julie Jway","Dental appointment on 19 Dec 2022","Dr Lim", "2022-12-19", "12pm", "julie@gmail.com");
-		ac2 = new NewAppointment_Junit("S1345676I","Lim Yuan","Eye appointment on 21 Nov 2022","Dr Tan", "2022-11-21", "4pm", "limyuan@gmail.com");
+		ac1 = new NewAppointment_Junit("T0108307J","Julie Jway","Dental appointment on 19 Dec 2022","Dr Lim", 5, "2022-12-19", "12pm", "julie@gmail.com");
+		ac2 = new NewAppointment_Junit("S1345676I","Lim Yuan","Eye appointment on 21 Nov 2022","Dr Tan",4, "2022-11-21", "4pm", "limyuan@gmail.com");
 		
 		
 		ac.addAppointment(ac1);
@@ -67,6 +67,28 @@ class NewAppointmentCollectionTest {
 		//Assert that Song Collection cannot be more than 5 (max capacity) 
 		assertEquals(ac.getAppointments().size(),APPOINTMENT_CAPACITY_LIMIT);
 	}
+	
+	
+	@Test
+	void testSortAppointmentByAppointmentLength() {
+		// fail("Not yet implemented");
+		//Act 
+		List<NewAppointment_Junit> testDoctor = ac.sortDoctorByDoctorLength();
+		
+		//arrange 
+		double newDoctorNameLength1 = testDoctor.get(0).getDoctor_name_length();
+		double newDoctorNameLength2 = testDoctor.get(1).getDoctor_name_length();
+	
+		
+		//Assert that the the song list is sorted from largest to shortest song length 
+		assertTrue(Double.compare(newDoctorNameLength1, newDoctorNameLength2) > 0);
+		
+	
+	
+	}
+	
+	
+	
 
 	@Test
 	void testSortAppointmentsByTitle() {
@@ -101,5 +123,23 @@ List<NewAppointment_Junit> testAc = ac.sortAppointmentsByTitle();
 		//assert if we input invalid id : we get a null 
 		assertNull(invalidAppointment);
 	}
+	
+	
+	@Test
+	void testFindAppointmentByUserName() {
+		//fail("Not yet implemented");
+	//fail("Not yet implemented");
+		
+		NewAppointment_Junit validUserName = ac.findAppointmentByUserName("Julie Jway");
+		NewAppointment_Junit invalidUsername = ac.findAppointmentByUserName("Invalid User name");
+		
+		//assert we retrieve a valid song 
+		assertNotNull(validUserName);
+		//assert retrieve the accurate song based on Id 
+		assertEquals(validUserName.getNric(),"T0108307J");
+		//assert if we input invalid id : we get a null 
+		assertNull(invalidUsername);
+	}
+
 
 }
