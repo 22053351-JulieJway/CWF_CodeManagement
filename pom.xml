@@ -59,20 +59,7 @@
     </dependency>
     
     
-    <!-- selenium dependency -->
-    <dependency>
-     <groupId>${selenium.groupId}</groupId>
-      <artifactId>${selenium.artifactId}</artifactId>
-      <version>${selenium.version}</version>
-    </dependency>
-    
-        <dependency>
-     <groupId>${testng.groupId}</groupId>
-      <artifactId>${testng.artifactId}</artifactId>
-      <version>${testng.version}</version>
-      <scope>test</scope>
-       
-     </dependency>
+
     
     <!-- jUnit5 dependency -->
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
@@ -86,7 +73,7 @@
 	<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.6</version>
+			<version>0.8.7</version>
 		</dependency>
     
     
@@ -117,7 +104,12 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
-			
+			<execution> 
+						<id>jacoco-check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
 				</executions>
       
       
@@ -145,7 +137,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
+          <version>2.22.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
