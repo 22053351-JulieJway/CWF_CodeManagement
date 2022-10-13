@@ -7,20 +7,23 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 
+//import org.junit.jupiter.api.Test;
+
+
+
 import com.sddevops.CWF_CodeManagement_Julie.NewAppointment_Junit;
-//import com.sddevops.junit_maven.eclipse.Song;
-//import com.sddevops.junit_maven.eclipse.Song;
+
 
 import java.util.List;
 
 class NewAppointmentCollectionTest {
 	
-	private NewAppointmentCollection_Junit ac;
-	private NewAppointment_Junit ac1;
-	private NewAppointment_Junit ac2;
+	public NewAppointmentCollection_Junit ac;
+	public NewAppointment_Junit ac1;
+	public NewAppointment_Junit ac2;
 	
-	private final int APPOINTMENT_COLLECTION_SIZE = 2;
-	private final int APPOINTMENT_CAPACITY_LIMIT = 2;
+	public final int APPOINTMENT_COLLECTION_SIZE = 2;
+	public final int APPOINTMENT_CAPACITY_LIMIT = 2;
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -35,18 +38,12 @@ class NewAppointmentCollectionTest {
 		
 	}
 
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
-	
 
 
 
-
-	@Test
+@Test
 	void testAddAppointment() {
-	
+		//fail("Not yet implemented");
 		List<NewAppointment_Junit> testAc = ac.getAppointments();
 		//Assert that Song collection is equals to song collection size 4
 		assertEquals(testAc.size(), APPOINTMENT_COLLECTION_SIZE);
@@ -61,8 +58,7 @@ class NewAppointmentCollectionTest {
 		assertEquals(ac.getAppointments().size(),APPOINTMENT_CAPACITY_LIMIT);
 	}
 	
-	
-	@Test
+@Test
 	void testSortAppointmentByAppointmentLength() {
 		// fail("Not yet implemented");
 		//Act 
@@ -81,9 +77,7 @@ class NewAppointmentCollectionTest {
 	}
 	
 	
-	
-
-	@Test
+@Test
 	void testSortAppointmentsByTitle() {
 		//fail("Not yet implemented");
 List<NewAppointment_Junit> testAc = ac.sortAppointmentsByTitle();
@@ -99,9 +93,7 @@ List<NewAppointment_Junit> testAc = ac.sortAppointmentsByTitle();
 
 	}
 
-	
-
-	@Test
+@Test
 	void testFindAppointmentByTitle() {
 		//fail("Not yet implemented");
 	//fail("Not yet implemented");
@@ -118,7 +110,7 @@ List<NewAppointment_Junit> testAc = ac.sortAppointmentsByTitle();
 	}
 	
 	
-	@Test
+@Test
 	void testFindAppointmentByUserName() {
 		//fail("Not yet implemented");
 	//fail("Not yet implemented");

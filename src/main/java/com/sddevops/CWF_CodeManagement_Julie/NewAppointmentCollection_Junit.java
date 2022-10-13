@@ -2,14 +2,14 @@ package com.sddevops.CWF_CodeManagement_Julie;
 
 import java.util.*;
 
-//import com.sddevops.junit_maven.eclipse.Song;
+
 
 public class NewAppointmentCollection_Junit {
 
-    //private static Comparator titleComparator;
-	private ArrayList<NewAppointment_Junit> appointments = new ArrayList<>();
-	//private ArrayList<NewAppointment_Junit> doctors_name = new ArrayList<>();
-    private int capacity;
+    
+	public ArrayList<NewAppointment_Junit> appointments = new ArrayList<>();
+	
+    public int capacity;
 
     public NewAppointmentCollection_Junit() {
     	
@@ -17,9 +17,7 @@ public class NewAppointmentCollection_Junit {
         
     }
 
-    public NewAppointmentCollection_Junit(int capacity) {
-        this.capacity = capacity;
-    }
+
 
     public List<NewAppointment_Junit> getAppointments() {
         return appointments;
@@ -31,7 +29,7 @@ public class NewAppointmentCollection_Junit {
     	}
     }
     
-   //@SuppressWarnings("unchecked")
+ 
 	public ArrayList<NewAppointment_Junit> sortAppointmentsByTitle() {         
         Collections.sort(appointments, NewAppointment_Junit.titleComparator);         
         return appointments;     
@@ -52,11 +50,12 @@ public class NewAppointmentCollection_Junit {
         return appointments;     
     }
     
-
     public NewAppointment_Junit findAppointmentByUserName(String username) {
     	for (NewAppointment_Junit a : appointments) { 		      
             if(a.getUserName().equals(username)) return a;
        }
     	return null;
     }
+
+ 
 }
