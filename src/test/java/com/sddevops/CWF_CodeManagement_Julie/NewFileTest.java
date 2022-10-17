@@ -21,7 +21,7 @@ public class NewFileTest {
   @Test
   public void checkTitle() {
 	  //Load republic poly website as a new page
-	  webDriver.navigate().to("http://localhost:8090/CWF_CodeManagement_Julie/NewFileTest.jsp");
+	  webDriver.navigate().to("http://localhost:8090/lesson14/NewFileTest.jsp");
 	  
 	  //Assert the title to check that we are indeed in the correct website
 	  Assert.assertEquals(webDriver.getTitle(), "Appointments");
