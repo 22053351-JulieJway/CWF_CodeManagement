@@ -14,9 +14,7 @@ import org.testng.annotations.AfterTest;
 
 public class NewFileTest {
 	private WebDriver webDriver;	
-  @Test
-  public void f() {
-  }
+ 
   
   @Test
   public void checkTitle() {
