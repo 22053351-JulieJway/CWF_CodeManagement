@@ -33,10 +33,10 @@ public class NewFileTest {
   @Test
   public void checkTitle1() {
 	  //Load republic poly website as a new page
-	  webDriver.navigate().to("http://localhost:8010/CWF_CodeManagement_Julie/UserServlet/dashboard");
+	  webDriver.navigate().to("http://localhost:8010/CWF_CodeManagement_Julie/HealthEaseServlet/index.jsp");
 	  
 	  //Assert the title to check that we are indeed in the correct website
-	  Assert.assertEquals(webDriver.getTitle(), "HTTP Status 404 – Not Found");
+	  Assert.assertEquals(webDriver.getTitle(), "Overview of appointments");
 	  
 	  System.out.println("title: "+webDriver.getTitle());
 	  

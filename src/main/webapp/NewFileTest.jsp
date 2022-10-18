@@ -9,7 +9,7 @@
 <body>
 
 <h1> HealthEase Add Appointment Form</h1>
-<form action ="AddAppointmentServlet" method = "post">
+
     <br>NRIC: <input type = "text" name = "nric">
     <br>Name: <input type = "text" name = "userName">
     <br>Health institution: <select name = "health_institution">
@@ -26,8 +26,7 @@
     <br>Time of Appointment: <input type = "time" name = "time_of_appointment">
     <br>Email: <input type = "text" name = "email">
   
-        <br><input type = "submit" value = "Call Servlet" />
-</form>
+
 
 
 </body>
